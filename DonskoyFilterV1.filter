@@ -1,0 +1,214 @@
+# Highlight High-Value Currency with Correct Colors and "Tink" Sound
+Show
+ BaseType "Orb of Alchemy" "Chaos Orb" "Regal Orb" "Vaal Orb" "Artificer's Orb" "Glassblower's Bauble"
+ SetFontSize 50
+ SetTextColor 255 204 0
+ SetBackgroundColor 0 0 0 
+ SetBorderColor 255 255 255   
+ PlayAlertSound 2 300
+ PlayEffect White
+ MinimapIcon 0 White Circle
+
+Show
+ BaseType "Exalted Orb" "Orb of Annulment" "Orb of Chance" "Prismatic Ring" "Gold Ring"
+ SetFontSize 50
+ SetTextColor 255 255 255
+ SetBorderColor 255 255 255
+ SetBackgroundColor 255 111 42
+ PlayAlertSound 6 200
+ PlayEffect Orange
+ MinimapIcon 0 Orange Circle
+ 
+ ## Divine Orb Style
+Show
+Class "Currency"
+BaseType "Mirror" "Divine" "Perfect Jeweller's Orb" "Greater Jeweller's Orb"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+ 
+# Highlight Gold (Reverted to Previous Style)
+Show
+ BaseType "Gold"
+ SetFontSize 25  
+ SetTextColor 0 0 0  
+ SetBorderColor 0 0 0 
+ SetBackgroundColor 255 223 0
+ 
+ # Fragments
+Show
+BaseType "Simulacrum" " Tablet" "Breachstone" "Barya" "Ultimatum" " Fragment" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Expedition Logbook"
+SetTextColor 255 207 255
+SetBorderColor 255 207 255
+SetBackgroundColor 65 20 80
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Square
+SetFontSize 40
+ 
+# Highlight Scroll of Wisdom
+Hide
+ BaseType "Scroll of Wisdom"
+ SetFontSize 50
+ SetTextColor 0 0 0
+ SetBorderColor 0 0 0
+ SetBackgroundColor 184 134 11  # Dark golden color
+ 
+# Highlight Rune Items with Light Green Color
+Show
+ BaseType "Rune"
+ SetFontSize 50
+ SetTextColor 0 0 0  # Black text color
+ SetBorderColor 0 0 0  # Black border color
+ SetBackgroundColor 111 255 111  # Light green background
+ PlayAlertSound 2 150  # Halved volume for runes
+ 
+# Highlight Currency Items with Subtle Brown/Gold Color (Excludes Specific BaseTypes Above)
+Show
+ Class "Currency"
+ SetFontSize 40  # Reduced font size
+ SetTextColor 139 69 19  # RGB for brown color
+ SetBorderColor 255 223 0  # RGB for gold border
+ SetBackgroundColor 204 164 0  # RGB for darker gold background
+ PlayAlertSound 2 150  # Halved volume for generic currency
+ 
+# Highlight Socketed Items (1 or More Sockets) with Subtle Grey
+Show
+
+ Sockets > 0
+ Rarity < Unique
+ SetFontSize 35  # Smaller font size
+ SetTextColor 211 211 211  # RGB for dark grey text
+ SetBorderColor 105 105 105  # RGB for dim grey border
+ SetBackgroundColor 55 55 55 188  # RGB for light grey background
+ 
+ Show
+Rarity Unique
+SetTextColor 175 96 37 255
+SetBorderColor 175 96 37 255
+SetBackgroundColor 53 13 13 255
+PlayAlertSound 3 300
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+SetFontSize 40
+ 
+# Highlight Quality Items (Excluding Flasks)
+Show
+ Quality > 0
+ SetFontSize 35  # Smaller font size
+ SetTextColor 211 211 211  # RGB for dark grey text
+ SetBorderColor 105 105 105  # RGB for dim grey border
+ SetBackgroundColor 55 55 55 188  # RGB for light grey background
+ 
+ Show
+BaseType "Waystone"
+Rarity <= Rare
+SetTextColor 155 255 255
+SetBorderColor 255 255 255
+PlayAlertSound 4 300
+PlayEffect White
+MinimapIcon 1 White Square
+SetFontSize 40
+
+# Uncut Gems
+#--------------------------
+
+Show
+BaseType "Uncut "
+SetTextColor 20 240 240
+SetBorderColor 20 240 240
+PlayAlertSound 2 300
+PlayEffect Cyan
+MinimapIcon 1 Cyan Triangle
+
+
+Show
+BaseType "Ring"
+Rarity Magic
+SetTextColor 110 110 240
+SetBorderColor 20 110 240
+
+# Socketables and Special Character Equipment
+#--------------------------
+
+# Special A Tier - League specific socketables and jewels
+Show 
+BaseType "Soul Core" "Timeless"
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 40
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan
+
+# Special A Tier - Sanctum Relics
+Show 
+Class "Relic"
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 40
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan
+
+# Special A Tier - Rare Jewels
+Show
+Class "Jewel"
+Rarity Rare
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 40
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan
+
+# Special B Tier - Any Jewels
+Show
+Class "Jewel"
+Rarity Magic
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 40
+PlayEffect Cyan Temp
+
+# Special B Tier - Any Runes and Charms
+Show 
+BaseType " Rune" " Charm"
+SetTextColor 0 240 190
+PlayEffect Cyan Temp
+
+Show
+Class "Currency"
+BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+MinimapIcon 2 Grey Circle
+
+Show
+Class "Rings" "Amulets" "Belts"
+Rarity Magic
+SetFontSize 30
+SetTextColor 2 90 205
+SetBorderColor 2 90 205
+PlayEffect Blue
+MinimapIcon 1 Blue Diamond
+
+
+
+
+
+
+
+
+
+
+# Hide all Normal (white) items
+Hide
+    Rarity Normal
+
+# Hide all Magic (blue) items
+Hide
+    Rarity Magic
+	
+
